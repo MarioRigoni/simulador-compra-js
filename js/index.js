@@ -1,62 +1,63 @@
-/**/
+// 1. Array objetos que representa los productos de la tienda
+const productos = [
+    { id: 1, nombre: 'procesador', precio: 296.989 },
+    { id: 2, nombre: 'motherboard', precio: 291.999 },
+    { id: 3, nombre: 'memorias', precio: 45.999 },
+    { id: 4, nombre: 'monitores', precio: 196.799 },
+    { id: 5, nombre: 'mouse', precio: 64.999 },
+    { id: 6, nombre: 'teclado', precio: 40.712 }
+];
 
+// 2. Array que representa el carrito de compras (productos seleccionados por el usuario)
+let carrito = [];
 
-// 1. Variables de productos y sus precios
-let procesador = 296.989;
-let motherboard = 291.999;
-let discoSolido = 120.834;
-let memoriaRam = 45.999;
-let monitor = 196.799;
-let mouse = 64.999;
-let teclado = 40.712;
-let parlantes = 89.999;
-let fuente = 120.599;
-let gabinete = 150.789;
-
-// 2. Inicializa el total en cero
-let total = 0;
-
-// 3. Función para agregar productos al total de la compra
-function agregarAlTotal(precio) {
-    total += precio; // Sumar el precio del producto al total
-}
-
-// 4. Simular la selección del usuario
-while (true) {
-    let seleccion = prompt("Ingrese el nombre del producto que desea agregar al carrito (procesador, motherboard, discoSolido, memoriaRam, monitor, mouse, teclado, parlantes, fuente, gabinete) o 'fin' para terminar:");
-
-    if (seleccion === 'fin') {
-        break; // Salir del bucle si el usuario escribe 'fin'
-    }
-
-    // 5. Evaluar la selección del usuario y agregar el producto correspondiente al total
-    if (seleccion === 'procesador') {
-        agregarAlTotal(procesador);
-    } else if (seleccion === 'motherboard') {
-        agregarAlTotal(motherboard);
-    } else if (seleccion === 'discoSolido') {
-        agregarAlTotal(discoSolido);
-    } else if (seleccion === 'memoriaRam') {
-        agregarAlTotal(memoriaRam);
-    } else if (seleccion === 'monitor') {
-        agregarAlTotal(monitor);
-    } else if (seleccion === 'mouse') {
-        agregarAlTotal(mouse);
-    } else if (seleccion === 'teclado') {
-        agregarAlTotal(teclado);
-    } else if (seleccion === 'parlantes') {
-        agregarAlTotal(parlantes);
-    } else if (seleccion === 'fuente') {
-        agregarAlTotal(fuente);
-    } else if (seleccion === 'gabinete') {
-        agregarAlTotal(gabinete);
+// 3. Funcion para agregar un producto al carrito usando su nombre
+function agregarAlCarrito(nombreProducto) {
+    const producto = productos.find(p => p.nombre === nombreProducto); // Busca e producto por nombre
+    if (producto) {
+        carrito.push(producto); // Agrega el producto encontrado al carrito
+        console.log(`${producto.nombre} agregado al carrito.`);
     } else {
-        console.log("Selección no válida, por favor ingrese el nombre del producto o 'fin' para salir.");
+        console.log("Producto no valido. Intente de nuevo.");
     }
 }
 
-// 6. Mostrar el total final de la compra en la consola
-console.log(`El total de su compra es: $${total.toFixed(2)}`);
+// 4. Funcion para manejar la seleccion de productos por el usuario
+function seleccionarProductos() {
+    let seleccion = ""; // Variable para almacenar la seleccion del usuario
+    while (seleccion !== 'fin') {
+        seleccion = prompt("Ingrese el nombre del producto que desea agregar al carrito o 'fin' para terminar:");
+        if (seleccion !== 'fin') {
+            agregarAlCarrito(seleccion); // Llama a la funcion para agregar producto
+        }
+    }
+}
+
+// 5. Funcion para calcular el total usando reduce
+function calcularTotalCarrito() {
+    const total = carrito.reduce((acumulado, producto) => acumulado + producto.precio, 0); // Suma precios
+    console.log(`Total del carrito: $${total.toFixed(2)}`); // Muestra el total con dos decimales
+}
+
+// 6. Funcion para aumentar el precio de todos los productos en un porcentaje dado
+function aumentarPrecio(porcentaje) {
+    const productosAumentados = productos.map(p => ({
+        ...p,
+        precio: (p.precio * (1 + porcentaje / 100)).toFixed(2) // Aumentar precio
+    }));
+    console.log("Precios aumentados:", productosAumentados);
+}
+
+// 7. Funcion para filtrar productos por precio maximo
+function filtrarPorPrecio(maxPrecio) {
+    const productosFiltrados = productos.filter(p => p.precio <= maxPrecio); // Filtrar por precio
+    console.log(`Productos que cuestan menos de $${maxPrecio}:`, productosFiltrados);
+}
+
+// 8. Llamamos a las funciones para ejecutar el proceso
+seleccionarProductos(); // Inicia la seleccion de productos
+calcularTotalCarrito(); // Muestra el total del carrito
+
 
 
 
