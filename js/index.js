@@ -1,4 +1,4 @@
-// 1. Array objetos que representa los productos de la tienda
+// 1. Array de objetos que representa los productos en la tienda
 const productos = [
     { id: 1, nombre: 'procesador', precio: 296.989 },
     { id: 2, nombre: 'motherboard', precio: 291.999 },
@@ -13,9 +13,9 @@ let carrito = [];
 
 // 3. Funcion para agregar un producto al carrito usando su nombre
 function agregarAlCarrito(nombreProducto) {
-    const producto = productos.find(p => p.nombre === nombreProducto); // Busca e producto por nombre
+    const producto = productos.find(p => p.nombre === nombreProducto); // Buscar producto por nombre
     if (producto) {
-        carrito.push(producto); // Agrega el producto encontrado al carrito
+        carrito.push(producto); // Agregar el producto encontrado al carrito
         console.log(`${producto.nombre} agregado al carrito.`);
     } else {
         console.log("Producto no valido. Intente de nuevo.");
@@ -27,8 +27,11 @@ function seleccionarProductos() {
     let seleccion = ""; // Variable para almacenar la seleccion del usuario
     while (seleccion !== 'fin') {
         seleccion = prompt("Ingrese el nombre del producto que desea agregar al carrito o 'fin' para terminar:");
-        if (seleccion !== 'fin') {
-            agregarAlCarrito(seleccion); // Llama a la funcion para agregar producto
+        if (seleccion === 'fin') {
+            calcularTotalCarrito(); // Llamada a la función para mostrar el total al finalizar
+            console.log("Gracias por su compra.");
+        } else {
+            agregarAlCarrito(seleccion); // Llamada a la función para agregar el producto
         }
     }
 }
@@ -54,9 +57,9 @@ function filtrarPorPrecio(maxPrecio) {
     console.log(`Productos que cuestan menos de $${maxPrecio}:`, productosFiltrados);
 }
 
-// 8. Llamamos a las funciones para ejecutar el proceso
+// 8. Llamamos a la función para iniciar el proceso
 seleccionarProductos(); // Inicia la seleccion de productos
-calcularTotalCarrito(); // Muestra el total del carrito
+
 
 
 
