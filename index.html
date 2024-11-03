@@ -16,28 +16,28 @@
             <nav>
                 <ul class="menu">
                     <li>
-                        <button class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i>Todos los Productos</button>
+                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i>Todos los Productos</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Procesadores</button>
+                        <button id="procesadores" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Procesadores</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Motherboard</button>
+                        <button id="motherboard" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Motherboard</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Memorias</button>
+                        <button id="memoria" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Memorias</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Monitores</button>
+                        <button id="monitores" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Monitores</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Mouse</button>
+                        <button id="mouse" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Mouse</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Teclados</button>
+                        <button id="teclados" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Teclados</button>
                     </li>
                     <li>
-                        <a class="boton-menu boton-carrito" href="./carrito.html"><i class="bi bi-cart-dash-fill"></i></a>Carrito <span class="numerito">0</span>
+                        <a class="boton-menu boton-carrito" href="./carrito.html"><i class="bi bi-cart-dash-fill"></i>Carrito <span id="numerito" class="numerito">0</span></a>
                     </li>
                     
                 </ul>
@@ -47,68 +47,13 @@
             </footer>
         </aside>
         <main>
-            <h1 class="titulo-principal"></h1>
-            <div class="contenedor-productos">
-                <div class="producto">
-                    <img class="producto-imagen" src="./img/ryzen-5.png" alt="logo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Microprocesador</h3>
-                        <p class="producto-precio">$296.989</p>
-                        <button class="producto-agregar">Agregar</button>
-                    </div>
+            <h1 class="titulo-principal">Todos los Productos</h1>
+            <div id="contenedor-productos" class="contenedor-productos">
+                    <!-- esto se relleno con js -->
                 </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="./img/mother1.png" alt="logo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">MotherBoard</h3>
-                        <p class="producto-precio">$291.999</p>
-                        <button class="producto-agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="./img/Memoria.png" alt="logo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Memoria</h3>
-                        <p class="producto-precio">$45.999</p>
-                        <button class="producto-agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="./img/monitor.png" alt="logo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Monitor</h3>
-                        <p class="producto-precio">$196.799</p>
-                        <button class="producto-agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="./img/Mause.jpg" alt="logo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Mouse</h3>
-                        <p class="producto-precio">$64.999</p>
-                        <button class="producto-agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="./img/teclado.jpg" alt="logo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Teclado</h3>
-                        <p class="producto-precio">$40.712</p>
-                        <button class="producto-agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="" alt="logo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">MotherBoard 3</h3>
-                        <p class="producto-precio">$1000</p>
-                        <button class="producto-agregar">Agregar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                
+        </main>
     </div>
-</div>
-<script src="./js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
