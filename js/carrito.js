@@ -1,10 +1,16 @@
+// obtiene los productos almecenados en el carrito 
 let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];
 
+// selecciona los elementos del DOM donde se va a mostrar el carrito vacio
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
+
+// almacena los botones de eliminacion
 let botonesEliminar;
+
+
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
@@ -17,7 +23,7 @@ function cargarProductosCarrito() {
         contenedorCarritoComprado.classList.add("disabled");
 
         contenedorCarritoProductos.innerHTML = "";
-
+        // recorre cada producto en el carrito y los agrega al DOM
         productosEnCarrito.forEach(producto => {
             const div = document.createElement("div");
             div.classList.add("carrito-producto");
@@ -44,6 +50,7 @@ function cargarProductosCarrito() {
             contenedorCarritoProductos.append(div);
         });
 
+        // Función para actualizar los botones de eliminar producto
         actualizarBotonesEliminar();
         actualizarTotal();
     } else {
@@ -61,7 +68,7 @@ function actualizarBotonesEliminar() {
         boton.addEventListener("click", eliminarDelCarrito);
     });
 }
-
+// Función para eliminar un producto específico del carrito.
 function eliminarDelCarrito(e) {
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);

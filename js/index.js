@@ -177,12 +177,14 @@ const productos = [
     }
 ];
 
+// elementos del DOM y productos en el carrito
 const contenedorProductos = document.querySelector(".contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector(".titulo-principal");
 let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];
 const numerito = document.querySelector("#numerito");
 
+// funcion cargar productos
 function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
     productosElegidos.forEach(producto => {
