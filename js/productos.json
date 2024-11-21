@@ -1,0 +1,170 @@
+[
+    {
+        "id": "procesador-1",
+        "titulo": "Procesador 1",
+        "imagen": "./img/ryzen-5.png",
+        "precio": 296.989,
+        "categoria": "procesadores"
+    },
+    {
+        "id": "procesador-2",
+        "titulo": "Procesador 2",
+        "imagen": "./img/ryzen5-2.png",
+        "precio": 312.999,
+        "categoria": "procesadores"
+    },
+    {
+        "id": "procesador-3",
+        "titulo": "Procesador 3",
+        "imagen": "./img/intel1.png",
+        "precio": 275.999,
+        "categoria": "procesadores"
+    },
+    {
+        "id": "procesador-4",
+        "titulo": "Procesador 4",
+        "imagen": "./img/intel2.png",
+        "precio": 320.000,
+        "categoria": "procesadores"
+    },
+    {
+        "id": "motherboard-1",
+        "titulo": "Motherboard 1",
+        "imagen": "./img/mother1.png",
+        "precio": 291.999,
+        "categoria": "motherboard"
+    },
+    {
+        "id": "motherboard-2",
+        "titulo": "Motherboard 2",
+        "imagen": "./img/mother2.jpg",
+        "precio": 309.000,
+        "categoria": "motherboard"
+    },
+    {
+        "id": "motherboard-3",
+        "titulo": "Motherboard 3",
+        "imagen": "./img/mother3.png",
+        "precio": 265.499,
+        "categoria": "motherboard"
+    },
+    {
+        "id": "motherboard-4",
+        "titulo": "Motherboard 4",
+        "imagen": "./img/intel4.png",
+        "precio": 299.999,
+        "categoria": "motherboard"
+    },
+    {
+        "id": "memoria-1",
+        "titulo": "Memoria RAM 1",
+        "imagen": "./img/Memoria.png",
+        "precio": 45.999,
+        "categoria": "memoria"
+    },
+    {
+        "id": "memoria-2",
+        "titulo": "Memoria RAM 2",
+        "imagen": "./img/Memoria.png",
+        "precio": 54.999,
+        "categoria": "memoria"
+    },
+    {
+        "id": "memoria-3",
+        "titulo": "Memoria RAM 3",
+        "imagen": "./img/Memoria.png",
+        "precio": 39.999,
+        "categoria": "memoria"
+    },
+    {
+        "id": "memoria-4",
+        "titulo": "Memoria RAM 4",
+        "imagen": "./img/Memoria.png",
+        "precio": 49.999,
+        "categoria": "memoria"
+    },
+    {
+        "id": "monitor-1",
+        "titulo": "Monitor 1",
+        "imagen": "./img/monitor.png",
+        "precio": 196.799,
+        "categoria": "monitores"
+    },
+    {
+        "id": "monitor-2",
+        "titulo": "Monitor 2",
+        "imagen": "./img/monitor.png",
+        "precio": 225.999,
+        "categoria": "monitores"
+    },
+    {
+        "id": "monitor-3",
+        "titulo": "Monitor 3",
+        "imagen": "./img/monitor.png",
+        "precio": 215.499,
+        "categoria": "monitores"
+    },
+    {
+        "id": "monitor-4",
+        "titulo": "Monitor 4",
+        "imagen": "./img/monitor.png",
+        "precio": 209.999,
+        "categoria": "monitores"
+    },
+    {
+        "id": "mouse-1",
+        "titulo": "Mouse 1",
+        "imagen": "./img/Mause.jpg",
+        "precio": 64.999,
+        "categoria": "mouse"
+    },
+    {
+        "id": "mouse-2",
+        "titulo": "Mouse 2",
+        "imagen": "./img/Mause.jpg",
+        "precio": 55.999,
+        "categoria": "mouse"
+    },
+    {
+        "id": "mouse-3",
+        "titulo": "Mouse 3",
+        "imagen": "./img/Mause.jpg",
+        "precio": 59.999,
+        "categoria": "mouse"
+    },
+    {
+        "id": "mouse-4",
+        "titulo": "Mouse 4",
+        "imagen": "./img/Mause.jpg",
+        "precio": 60.999,
+        "categoria": "mouse"
+    },
+    {
+        "id": "teclado-1",
+        "titulo": "Teclado 1",
+        "imagen": "./img/teclado.jpg",
+        "precio": 40.712,
+        "categoria": "teclados"
+    },
+    {
+        "id": "teclado-2",
+        "titulo": "Teclado 2",
+        "imagen": "./img/teclado.jpg",
+        "precio": 42.999,
+        "categoria": "teclados"
+    },
+    {
+        "id": "teclado-3",
+        "titulo": "Teclado 3",
+        "imagen": "./img/teclado.jpg",
+        "precio": 44.999,
+        "categoria": "teclados"
+    },
+    {
+        "id": "teclado-4",
+        "titulo": "Teclado 4",
+        "imagen": "./img/teclado.jpg",
+        "precio": 41.499,
+        "categoria": "teclados"
+    }
+]

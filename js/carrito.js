@@ -69,6 +69,7 @@ function actualizarBotonesEliminar() {
     });
 }
 // Función para eliminar un producto específico del carrito.
+
 function eliminarDelCarrito(e) {
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
@@ -91,11 +92,25 @@ cargarProductosCarrito();
 botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito() {
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 
+    Swal.fire({
+        title: "¿Estas Seguro?",
+        icon: "question",
+        html: `
+          Se van a brorrar ${productosEnCarrito.reduce((acc, producto)=> acc + producto.cantidad, 0)} Productos`,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: `Si`,
+        cancelButtonText: `No`
+      }).then((result) => {
+        if (result.isConfirmed) {
+        productosEnCarrito.length = 0;
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
+        } 
+    })
 }
+
 
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
